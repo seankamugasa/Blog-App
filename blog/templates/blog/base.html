@@ -14,10 +14,14 @@
     </div>
     <div id="sidebar">
         <h2>Welcome to your Blog!</h2>
-        <p>Total post count :{% total_posts %}</p>
+        <p>Total post count : {% total_posts %}</p>
+        <p><a href="{% url 'blog:post_feed' %}">Subscribe to my RSS feed</a></p>
         <!-- You can add Social media icons below-->
-        <p><a href="#">Facebook</a></p>
-        <a href="#">Linklden</a>
+        <p>
+            | <a href="#">Facebook</a> 
+            | <a href="#">LinkedIn</a>
+            | <a href="#">Twitter</a> |
+        </p> 
         <h3>Latest posts</h3>
         {% show_latest_posts 3 %}
         
