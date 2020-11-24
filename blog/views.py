@@ -7,7 +7,7 @@ from django.core.mail import send_mail
 from .forms import EmailPostForm,CommentForm
 from django.db.models import Count
 
-# Create your views here.
+
 def post_list(request):
     object_list = Post.published.all()
     
