@@ -1,0 +1,46 @@
+{% load blog_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="sidebar">
+        <h2>Welcome to your Blog!</h2>
+        <p>Total post count :{% total_posts %}</p>
+        <!-- You can add Social media icons below-->
+        <p><a href="#">Facebook</a></p>
+        <a href="#">Linklden</a>
+        <h3>Latest posts</h3>
+        {% show_latest_posts 3 %}
+        
+        <ul>
+            {% for post in most_commented_posts %}
+               <li>
+                   <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+               </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
