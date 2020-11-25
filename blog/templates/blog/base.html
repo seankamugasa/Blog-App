@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}My Blog{% endblock %}</title>
     <link href="{% static 'css/blog.css' %}" rel="stylesheet">
     
 </head>
@@ -13,24 +13,30 @@
         {% endblock %}
     </div>
     <div id="sidebar">
-        <h2>Welcome to your Blog!</h2>
-        <p>Total post count : {% total_posts %}</p>
-        <p><a href="{% url 'blog:post_feed' %}">Subscribe to my RSS feed</a></p>
-        <!-- You can add Social media icons below-->
-        <p>
-            | <a href="#">Facebook</a> 
-            | <a href="#">LinkedIn</a>
-            | <a href="#">Twitter</a> |
-        </p> 
-        <h3>Latest posts</h3>
-        {% show_latest_posts 3 %}
+        <h2><a href="{% url 'blog:post_list' %}">HOME</a></h2>
+        <h4><a href="{% url 'blog:post_search' %}">Search posts</a></h4>
+
+        <p><b>Total post(s) count</b> : {% total_posts %}</p>
         
+        <!-- You can add Social media icons below-->
+        <b>Follow us:</b>
+           </br> <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li> 
+         
+        <p>
+            <b>Subscribe</b>: <a href="{% url 'blog:post_feed' %}">RSS feed</a>
+        </p>
+
+        <h4>Latest posts</h4>
+        {% show_latest_posts 3 %}
         <ul>
             {% for post in most_commented_posts %}
                <li>
                    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
                </li>
             {% endfor %}
+            
         </ul>
     </div>
 </body>
