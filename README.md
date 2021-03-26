@@ -16,6 +16,7 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 
 $ http://127.0.0.1:8888/admin/        {To create your blog articles}
+$ http://127.0.0.1:8888/blog/         {To view your blog articles}
 
  FEATURES:
 -Search
