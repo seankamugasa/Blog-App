@@ -1,5 +1,4 @@
 # Django-Blog-App
-# Django-Blog-App
 HOW IT WORKS !!!
 
 --Assuming you are using Visual studio text editor in Ubuntu--
