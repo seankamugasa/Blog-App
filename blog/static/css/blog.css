@@ -2,21 +2,22 @@ body {
     margin:0;
     padding:0;
     font-weight: 400;
-    color:#333;
-    font-family:helvetica, sans-serif;
-    background-image: url('/static/img/nine.png');
+    color:#fff;
+    font-family:'Roboto', sans-serif;
+    font-size: 1.1rem;
+    background-image: url('/static/img/youtube1.png');
 }
 p {
     line-height: 1.8;
 }
 
 a { 
-    color:#00abff;
+    color:#51be78;
     text-decoration:none; 
 }
 
 a:hover {
-    color:#00a74f;
+    color:rgb(251, 255, 4);
 }
 
 h1 { 
@@ -39,8 +40,8 @@ h2 {
 #sidebar { 
     float:right;
     width:18%;
-    padding:30px;
-    background:#efefef; 
+    padding:45px;
+    background:#282828;  
     height:100%;
 }
 
@@ -162,7 +163,7 @@ form p {
 label {
     float:left;
     clear:both;
-    color:#333;
+    color:#51be78;
     margin-bottom:4px;
 }
 input, textarea {

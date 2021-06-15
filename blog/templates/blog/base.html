@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}My Blog{% endblock %}</title>
+    <title>{% block title %}Venom Blog{% endblock %}</title>
     <link href="{% static 'css/blog.css' %}" rel="stylesheet">
     
 </head>
@@ -13,21 +13,12 @@
         {% endblock %}
     </div>
     <div id="sidebar">
-        <h2><a href="{% url 'blog:post_list' %}">HOME</a></h2>
-        <h4><a href="{% url 'blog:post_search' %}">Search posts</a></h4>
+        <p class="mb-4"><img src="{% static 'img/logo.png' %}" alt="Image" class="img-fluid"></p>
+        <h4><a href="{% url 'blog:post_search' %}">Search Blog Posts</a></h4>
+        <h4><a href="{% url 'blog:post_list' %}">Blog Home page</a></h4>
 
         <p><b>Total post(s) count</b> : {% total_posts %}</p>
         
-        <!-- You can add Social media icons below-->
-        <b>Follow us:</b>
-           </br> <li><a href="#">Facebook</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Twitter</a></li> 
-         
-        <p>
-            <b>Subscribe</b>: <a href="{% url 'blog:post_feed' %}">RSS feed</a>
-        </p>
-
         <h4>Latest posts</h4>
         {% show_latest_posts 3 %}
         <ul>
@@ -37,23 +28,26 @@
                </li>
             {% endfor %}
             
-        </ul>
-        <h4>Developers:</h4>
-        <li><a href='https://www.linkedin.com/in/sean-kamugasa/'>Sean Kamugasa</a></li>
-        <li><a href='https://www.linkedin.com/in/herbert-wasswa/'>Herbert Wasswa</a></li>
+        </ul> 
+    
+        <!-- You can add Social media icons below-->
+        <p>
+        Follow Us
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Twitter</a></li> 
+        </p>
+        
+        <p>
+            Blog Developers
+            <li><a href='https://seankamugasa.github.io/'>Sean Kamugasa</a></li>
+            <li><a href='https://wasswaherbert.github.io/'>Herbert Wasswa</a></li>
+        </p>
+
+        <p>
+            <b>Subscribe</b>: <a href="{% url 'blog:post_feed' %}">RSS feed</a>
+        </p>
+
     </div>
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
