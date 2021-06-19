@@ -1,7 +1,7 @@
 # Django-Blog-App
 HOW IT WORKS !!!
 
--Assuming you have read the entire licence governung this source code.
+-Assuming you have read the entire licence governing this source code.
 
 --Assuming you are using Visual studio text editor in Ubuntu--
 Run the following in your terminal.
