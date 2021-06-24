@@ -1,0 +1,55 @@
+*************SETTING UP YOUR POSTGRES DATABASE IN LINUX OS **************
+
+PART (A)
+
+1. sudo su - postgres
+2. psql
+3. CREATE DATABASE blog;
+4. CREATE USER blog WITH PASSWORD 'blog@blog';
+5. ALTER ROLE blog SET client_encoding TO 'utf8';
+6. ALTER ROLE blog SET default_transaction_isolation TO 'read committed';
+8. ALTER ROLE blog SET timezone TO 'UTC';
+9. GRANT ALL PRIVILEGES ON DATABASE blog TO blog;
+10. \q
+11. exit
+***********************************************************************
+
+PART (B)
+
+12. python manage.py makemigrations
+13. python manage.py migrate
+14. After creating the database structure, we can create an administrative account by typing:
+15. python manage.py createsuperuser
+
+18. You will be asked to select a username, provide an email address,  
+    enter password and confirm a password for the account.
+
+19. COPY AND PASTE THIS IN YOUR settings.py under the database section replacing SQLite DB
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blog',
+        'USER': 'blog',
+        'PASSWORD': 'blog@blog',
+        'HOST' : 'localhost',
+        'PORT' : '',
+    }
+}
+
+
+20. Once you have an admin account set up, you can test that your database is performing 
+    correctly by starting up the Django development server:
+
+21. python manage.py runserver 8081 or any port of choice.
+22/ Contact Developers instantly via licence.txt if the database fails to install 
+    or read part C
+***************************************************************************
+
+PART (C)
+
+DIFFICULTY IN SETTING UP THE DATABASE? READ THE ARTICLE BLOW
+
+INDEPTH UNDERSTANDING OF POSTGRES:
+REFERENCE: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
