@@ -1,44 +1,72 @@
-# Django-Blog-App
-HOW IT WORKS !!!
+***********************HOW TO RUN THE DJngo BLOG APP**************************
 
--Assuming you have read the entire licence governing this source code.
+PART (A)
 
---Assuming you are using Visual studio text editor in Ubuntu--
-Run the following in your terminal.
+a) Assuming you have read the entire Licence governing this source code.
+   You can procede with instructions below:
 
-$ pipenv shell                        {To create a virtual environment}
+                      <!>CAUTION/IMPORTANT!!!
+b) These Instructions are strictly for software developers using linux OS. 
+   This system was developed from Linux OS Ubuntu 18.04 
 
-$ ls                                  {To see if manage.py is listed among}
+c) Clone or Download This Project Zip Folder and Extract it.
 
-$ pip install -r requirements.txt   
+e) Right click on the extracted folder and open it with Visual Studio Text Editor
 
-$ python manage.py createsuperuser
+If you don't have Visual studio Text Editor
+in your linux OS based machine, follow Instructions
+from this link: https://www.tecmint.com/install-visual-studio-code-on-linux/
 
-$ python manage.py runserver
+d) Open Terminal in Visual Studio Text Editor and Execute Following Commands:
 
-$ http://127.0.0.1:8888/admin/        {To create your blog articles}
-$ http://127.0.0.1:8888/blog/         {To view your blog articles}
+*******************************************************************************
 
- FEATURES:
--Search
--Comment Section
--Posts Count
--RSS feed
+PART (B)
 
- CONTACT DEVELOPERS via LinkedIn:
-- Sean Kamugasa   
-- Wasswa Herbert  
+<!> CAUTION <!> | IMPORTANT |
 
- CONTACT DEVELOPERS via Email:
-- seankamugasa@gmail.com
-- wasswaherbert907@gmail.com
- 
-NOTICE:
-This blog app runs under PostgreSQL database. Install it.
+==> Before proceding to any of steps provided below IN PART (C), please setup the postgres database 
+using the postgre.txt file provided in the project folder. If you skip this step, 
+the project will not execute.
 
-==> HOW TO INSTALL PostgreSQL
+*********************************************************************************
 
-# https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+PART (C)
 
-Thank you
-Enjoy !!! 
+<!> START 
+** Assuming you have read all the instructions in PART (B)
+** Assuming you already have pip or pipenv Installed on your Machine.
+Assuming you are familiar with migration(s) procedures in Django Frame Work.
+
+1. Setup the virtual Environment in terminal 1
+   $  pipenv --python <version>
+
+2. Activate the Environment
+   $  pipenv shell
+
+3. In the activated environment, install the requirements for the project
+   $  pip install -r requirements.txt
+
+4. Apply all the migrations
+   $  python manage.py migrate
+
+6. Create a superuser
+   $  python manage.py createsuperuser
+
+7. In your terminal 1, run your project
+   $  python manage.py runserver
+   Now enter following URL in Your Browser Installed On Your Pc
+   http://127.0.0.1:8000/
+
+<!> STOP
+
+-----------------------------------------------------------------------------
+
+DEVELOPER ONLINE PORTFOLIOS
+
+
+
+1. SEAN KAMUGASA   : https://seankamugasa.github.io/
+2. WASSWA HERBERT  : https://wasswaherbert.github.io/
+
+------------------------------------------------------------------------------
