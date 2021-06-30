@@ -23,11 +23,11 @@ d) Open Terminal in Visual Studio Text Editor and Execute Following Commands:
 
 PART (B)
 
-<!> CAUTION <!> | IMPORTANT |
+<!> CAUTION | IMPORTANT |
 
-==> Before proceding to any of steps provided below IN PART (C), please setup the postgres database 
-using the postgre.txt file provided in the project folder. If you skip this step, 
-the project will not execute.
+==> Before proceding to any of steps provided below IN PART (C), 
+please setup the postgres database  using the postgre.txt file provided 
+in the project folder. If you skip this step, the project will not execute.
 
 *********************************************************************************
 
@@ -36,9 +36,9 @@ PART (C)
 <!> START 
 ** Assuming you have read all the instructions in PART (B)
 ** Assuming you already have pip or pipenv Installed on your Machine.
-Assuming you are familiar with migration(s) procedures in Django Frame Work.
+** Assuming you are familiar with migration(s) procedures in Django Frame Work.
 
-1. Setup the virtual Environment in terminal 1
+1. Setup the virtual Environment via terminal.
    $  pipenv --python <version>
 
 2. Activate the Environment
